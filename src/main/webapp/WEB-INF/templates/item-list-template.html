@@ -1,0 +1,26 @@
+<h1>Item List</h1>
+<hr />
+<table class="table">
+	<thead>
+		<tr>
+			<th>Id</th>
+			<th>Name</th>
+			<th>Description</th>
+			<th></th>
+		</tr>
+	</thead>
+	<tbody>
+		{{ _.each(items, function(item){ }}
+			<tr>
+				<td>{{= item.get("id") }}</td>
+				<td>{{= item.get("name") }}</td>
+				<td>{{= item.get("description") }}</td>
+				<td>
+					<input type="checkbox" name="item" value="{{= item.get("id") }}">
+				</td>
+			</tr>
+		{{ }); }}
+	</tbody>
+</table>
+<hr />
+<button class="btn btn-primary">Do Order</button>
