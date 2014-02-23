@@ -28,13 +28,15 @@ function($, _, Backbone, ItemCollection, ItemListTemplate, OrderModel) {
 		    	"click .btn-primary": "doOrder"
 		    },
 		    doOrder: function(event) {
-		    	var selectedItems = $('input[name="item"]:checked').map(function () {return this.value;}).get();
+		    	var selectedItems = $("input[name='item']:checked");
+		    	var selectedItemValues = $(selectedItems).map(function() {return this.value;}).get();
 		    	var order = new OrderModel();
 		    	order.on("invalid", function(model, error) {alert(error);});
-		    	order.set("items", selectedItems);
+		    	order.set("items", selectedItemValues);
 	    		order.save(null, { 
 	    			success: function(model) {
 	    				alert("Order inserted successfully!");
+	    				$(selectedItems).attr("checked", false);
 	    			},
 	    			error: function(model, reponse) {
 	    				alert(reponse.responseText);
