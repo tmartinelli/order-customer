@@ -8,8 +8,8 @@
 	<name>order-customer Maven Webapp</name>
 	<url>http://maven.apache.org</url>
     <properties>
-        <org.spring.framework.version>3.2.4.RELEASE</org.spring.framework.version>
-        <org.spring.security.version>3.2.0.RELEASE</org.spring.security.version>
+        <spring.framework.version>3.2.4.RELEASE</spring.framework.version>
+        <spring.security.version>3.2.0.RELEASE</spring.security.version>
 		<servlet.api.version>2.5</servlet.api.version>
 		<jsp.api.version>2.1</jsp.api.version>
 		<jstl.version>1.2</jstl.version>
@@ -19,27 +19,27 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
-            <version>${org.spring.framework.version}</version>
+            <version>${spring.framework.version}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-webmvc</artifactId>
-            <version>${org.spring.framework.version}</version>
+            <version>${spring.framework.version}</version>
         </dependency>
         <dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-context-support</artifactId>
-			<version>${org.spring.framework.version}</version>
+			<version>${spring.framework.version}</version>
 		</dependency>
 		<dependency>
 		    <groupId>org.springframework.security</groupId>
 		    <artifactId>spring-security-web</artifactId>
-		    <version>${org.spring.security.version}</version>
+		    <version>${spring.security.version}</version>
 		</dependency>
 		<dependency>
 		    <groupId>org.springframework.security</groupId>
 		    <artifactId>spring-security-config</artifactId>
-		    <version>${org.spring.security.version}</version>
+		    <version>${spring.security.version}</version>
 		</dependency>		
         <dependency>
             <groupId>javax.servlet</groupId>

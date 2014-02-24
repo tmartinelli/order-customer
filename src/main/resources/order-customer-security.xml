@@ -7,7 +7,7 @@
 						http://www.springframework.org/schema/security/spring-security-3.2.xsd">
  
 	<http>
-		<intercept-url pattern="/*" access="ROLE_TABLE" />
+		<intercept-url pattern="/**" access="ROLE_TABLE" />
 		<http-basic />
 	</http>
  
